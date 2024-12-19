@@ -1,6 +1,7 @@
 import React, {useState} from 'react';
 import logo from './logo.svg';
 import './App.css';
+import {FullInput} from "./components/FullInput";
 
 function App() {
     let [message, setMessage] = useState([
@@ -11,8 +12,7 @@ function App() {
 
     return (
         <div className="App">
-            <input/>
-            <button>+</button>
+            <FullInput/>
             {message.map( (elem, index) => {
                 return (
                     <div key={index}>{elem.message}</div>
